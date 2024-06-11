@@ -3,7 +3,6 @@ import React from "react";
 import { useState } from "react";
 
 import Buttons from "./Buttons.js";
-import Result from "./Result.js";
 import ScoreBoard from "./Scoreboard.js";
 import { getComputerChoice } from "../utils/utils.js";
 
@@ -52,9 +51,9 @@ const RPSGame = () => {
   };
 
   return (
-    <div className="w-full h-full items-center flex justify-center flex-col">
+    <div className="w-full h-full items-center flex justify-center flex-col gap-4">
       <header>
-        <h1>Rock Paper Scissors</h1>
+        <h1 className="text-2xl">Rock Paper Scissors</h1>
       </header>
       <ScoreBoard
         userOutcome={userOutcome}
@@ -63,11 +62,6 @@ const RPSGame = () => {
         computerChoice={computerChoice}
         computerScore={computerScore}
         userScore={userScore}
-      />
-      <Result
-        userOutcome={userOutcome}
-        userChoice={userChoice}
-        computerChoice={computerChoice}
       />
       <Buttons game={game} userOutcome={userOutcome} userChoice={userChoice} />
 

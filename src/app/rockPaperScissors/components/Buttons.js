@@ -32,28 +32,34 @@ const Buttons = ({ game, userOutcome, userChoice }) => {
     }
 
     return(
-        <div className="flex flex-row">
-          <img 
-            src={rockHand.src}
-            alt="rock"
-            id="rock"
-            className={imageClass('rock')}
-            onClick={() => game("rock")} 
-          />
-          <img 
-            src={paperHand.src} 
-            alt="paper" 
-            id="paper" 
-            className={imageClass('paper')}
-            onClick={() => game("paper")}
-          />
-          <img 
-            src={scissorsHand.src}
-            alt="scissors" 
-            id="scissors" 
-            className={imageClass('scissors')}
-            onClick={() => game("scissors")}
-          />
+        <div className="flex flex-row gap-2">
+          <button>
+            <img 
+              src={rockHand.src}
+              alt="rock"
+              id="rock"
+              className={imageClass('rock')}
+              onClick={() => game("rock")} 
+            />
+          </button>
+          <button>
+            <img 
+              src={paperHand.src} 
+              alt="paper" 
+              id="paper" 
+              className={imageClass('paper')}
+              onClick={() => game("paper")}
+            />
+          </button>
+          <button>
+            <img 
+              src={scissorsHand.src}
+              alt="scissors" 
+              id="scissors" 
+              className={imageClass('scissors')}
+              onClick={() => game("scissors")}
+            />
+          </button>
         </div>
     );
 };
